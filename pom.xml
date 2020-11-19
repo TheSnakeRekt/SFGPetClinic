@@ -37,6 +37,7 @@
                     <goal>install</goal>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
