@@ -5,6 +5,7 @@ import spring.guru.petclinic.model.Owner;
 import spring.guru.petclinic.services.CrudService;
 import spring.guru.petclinic.services.OwnerService;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -22,13 +23,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements O
 
     @Override
     public Owner save(Owner object) {
-        return super.save(object.getId(),object);
+        return super.save(object);
     }
 
     @Override
-    public void save(List<Owner> objects) {
-        objects.forEach(object-> super.save(object.getId(),object));
-    }
+    public List<Owner> save(List<Owner> objects) { return super.save(objects);}
 
     @Override
     public void deleteById(Long id) {

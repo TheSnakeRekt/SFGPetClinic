@@ -28,17 +28,14 @@ public class DataLoader implements CommandLineRunner {
 
         owner1.setFirstName("Jimmy");
         owner1.setLastName("Wilson");
-        owner1.setId(1L);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Jimmy");
         owner2.setLastName("Neutron");
-        owner2.setId(2L);
 
         Owner owner3 = new Owner();
         owner3.setFirstName("Jimmy");
         owner3.setLastName("Shimy-o");
-        owner3.setId(3L);
 
         List<Owner> owners = new ArrayList<>();
 
@@ -49,7 +46,6 @@ public class DataLoader implements CommandLineRunner {
         Vet vet1 = new Vet();
         vet1.setFirstName("Dr");
         vet1.setLastName("Larson");
-        vet1.setId(1L);
 
 
         vetService.save(vet1);

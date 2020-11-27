@@ -2,6 +2,7 @@ package spring.guru.petclinic.services;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 
@@ -11,6 +12,8 @@ public interface CrudService<T,ID> {
     T findById(ID id);
 
     T save(T object);
+
+    List<T> save(List<T> objects);
 
     void delete (T object);
 

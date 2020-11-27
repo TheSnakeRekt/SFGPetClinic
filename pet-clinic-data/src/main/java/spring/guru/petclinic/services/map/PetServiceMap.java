@@ -5,6 +5,7 @@ import spring.guru.petclinic.model.Pet;
 import spring.guru.petclinic.model.Vet;
 import spring.guru.petclinic.services.CrudService;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -15,13 +16,16 @@ public class PetServiceMap extends AbstractMapService<Pet,Long> implements CrudS
     }
 
     @Override
+    public List<Pet> save(List<Pet> objects) { return super.save(objects); }
+
+    @Override
     public Pet findById(Long id) {
         return super.findById(id);
     }
 
     @Override
     public Pet save(Pet object) {
-        return super.save(object.getId(),object);
+        return super.save(object);
     }
 
     @Override

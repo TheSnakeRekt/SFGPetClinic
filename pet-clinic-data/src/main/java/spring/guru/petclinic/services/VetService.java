@@ -6,5 +6,4 @@ import java.util.List;
 
 
 public interface VetService extends CrudService<Vet,Long>{
-    void save(List<Vet> objects) ;
 }
