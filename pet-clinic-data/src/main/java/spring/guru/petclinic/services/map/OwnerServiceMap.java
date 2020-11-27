@@ -1,5 +1,6 @@
 package spring.guru.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import spring.guru.petclinic.model.Owner;
 import spring.guru.petclinic.services.CrudService;
 import spring.guru.petclinic.services.OwnerService;
@@ -7,6 +8,7 @@ import spring.guru.petclinic.services.OwnerService;
 import java.util.List;
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {

@@ -1,5 +1,7 @@
 package spring.guru.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
+
 import java.util.*;
 
 public abstract class AbstractMapService<T, ID> {

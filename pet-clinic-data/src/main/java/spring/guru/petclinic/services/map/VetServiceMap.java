@@ -1,5 +1,6 @@
 package spring.guru.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import spring.guru.petclinic.model.Owner;
 import spring.guru.petclinic.model.Vet;
 import spring.guru.petclinic.services.CrudService;
@@ -8,6 +9,7 @@ import spring.guru.petclinic.services.VetService;
 import java.util.List;
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService{
     @Override
     public Set<Vet> findAll() {

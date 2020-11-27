@@ -1,8 +1,9 @@
 package spring.guru.petclinic.services;
 
-import spring.guru.petclinic.model.Pet;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
+
 
 public interface CrudService<T,ID> {
     Set<T> findAll();
