@@ -1,11 +1,14 @@
 package spring.guru.petclinic.services.map;
 
+import spring.guru.petclinic.model.Owner;
 import spring.guru.petclinic.model.Vet;
 import spring.guru.petclinic.services.CrudService;
+import spring.guru.petclinic.services.VetService;
 
+import java.util.List;
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long> {
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService{
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
@@ -29,5 +32,10 @@ public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudS
     @Override
     public void delete(Vet object) {
         super.delete(object);
+    }
+
+    @Override
+    public void save(List<Vet> objects) {
+        objects.forEach(object-> super.save(object.getId(),object));
     }
 }
