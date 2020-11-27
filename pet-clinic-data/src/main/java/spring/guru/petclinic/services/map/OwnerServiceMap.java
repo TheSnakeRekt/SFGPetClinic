@@ -2,10 +2,8 @@ package spring.guru.petclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import spring.guru.petclinic.model.Owner;
-import spring.guru.petclinic.services.CrudService;
 import spring.guru.petclinic.services.OwnerService;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
