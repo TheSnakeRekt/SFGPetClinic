@@ -6,8 +6,6 @@ import spring.guru.petclinic.model.Owner;
 import spring.guru.petclinic.model.Vet;
 import spring.guru.petclinic.services.OwnerService;
 import spring.guru.petclinic.services.VetService;
-import spring.guru.petclinic.services.map.OwnerServiceMap;
-import spring.guru.petclinic.services.map.VetServiceMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +17,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
