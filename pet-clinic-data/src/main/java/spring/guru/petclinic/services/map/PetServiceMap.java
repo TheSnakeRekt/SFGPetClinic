@@ -27,7 +27,6 @@ public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetSe
         return super.findById(id);
     }
 
-
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
